@@ -1,0 +1,432 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /*网页、css 编码是 utf8 时，某些情况下直接写：宋体、微软雅黑之类的中文字体名字，会出现不能识别导致字体设置失效的问题，如果把字体名字转成对应编码如：‘\5b8b\4f53’，就不会出现这个问题。*/
+    font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+}
+
+a:visited,
+a:link,
+a:active {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #35b558;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+#header {
+    width: 1000px;
+    min-height: 50px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+#header .logo {
+    float: left;
+    width: 113px;
+    margin-top: 5px;
+}
+
+#header .header-ad {
+    height: 50px;
+    width: 160px;
+    margin-left: 20px;
+    float: left;
+    margin-top: 5px;
+}
+
+#header .search-section {
+    height: 38px;
+    width: 380px;
+    border: 1px solid #e4e4e4;
+    position: relative;
+    float: left;
+    margin-top: 5px;
+}
+
+.search-section .search-text {
+    width: 100%;
+    height: 36px;
+    line-height: 18px;
+    border: 0px;
+    text-align: left;
+    font-size: 12px;
+    color: #333;
+    outline: none;
+}
+
+.search-section .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 40px;
+    height: 38px;
+    border: 1px solid #dfdfdf;
+    border-top: 0px;
+    border-bottom: 0px;
+    color: #6d6d6d;
+    background: url(../images/topsearch-icon_e1f5df2.png) center center no-repeat;
+    cursor: pointer;
+    box-sizing: content-box;
+}
+
+.search-section .hot-words {
+    position: absolute;
+    top: 9px;
+    right: 48px;
+}
+
+.search-section .hot-words a {
+    display: inline-block;
+    padding: 1px 3px;
+    margin-left: 5px;
+    color: gray;
+    background: #f3f3f3;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#header .loginbox {
+    line-height: 50px;
+    float: right;
+    font-size: 12px;
+    color: #333;
+}
+
+#header .loginbox a {
+    text-decoration: none;
+}
+
+.loginbox > em {
+    font-style: normal;
+    padding: 0px 10px;
+}
+
+.loginbox .my-massage2 {
+    background: url(../images/massage-icon2_d1369b2.gif) left center no-repeat;
+    background-size: 15px 13px;
+    text-align: left;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+#loading {
+    width: 100%;
+    height: 2px;
+    overflow: hidden;
+    background: #f3f3f3;
+}
+
+#loading .loading-length {
+    width: 100%;
+    height: 2px;
+    background: -webkit-gradient(linear, 10% 10%, 100% 100%, color-stop(0.14, #35b550), color-stop(0.5, #8aca8c), color-stop(1, #2d85ca));
+}
+
+#navpostion {
+    width: 100%;
+    height: 42px;
+    background: rgba(255, 255, 255, .9);
+    border-bottom: 1px solid #e8e8e8;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+}
+
+#navpostion .nav {
+    width: 1000px;
+    height: 42px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav .navbox {
+    position: relative;
+    float: left;
+}
+
+.nav .navbox >a:first-child {
+    display: inline-block;
+    font-size: 14px;
+    width: auto;
+    color: #333;
+    line-height: 42px;
+    padding: 0;
+    margin-right: 22px;
+    text-align: left;
+}
+
+.nav .navbox >a {
+    display: inline-block;
+    width: 120px;
+    font-size: 14px;
+    color: #333;
+    line-height: 42px;
+    padding: 0;
+    text-align: center;
+}
+
+.nav .navbox .navpanel {
+    position: absolute;
+    top: 42px;
+    width: 950px;
+    background: rgba(255, 255, 255, .97);
+    border: 1px solid #e8e8e8;
+    /* border-top: 0; */
+    padding-left: 50px;
+    -webkit-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    box-shadow: rgba(0, 0, 0, .1) 0 1px 5px;
+    display: none;
+    z-index: 2000;
+}
+
+.nav .navbox .navpanel .panel-item {
+    float: left;
+    position: relative;
+    margin-left: -1px;
+    border-right: 1px solid #F7F7F7;
+    float: left;
+    padding-left: 22px;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    height: 100%;
+    width: 104px;
+}
+
+.nav .navbox:hover .navpanel {
+    display: block;
+}
+
+.nav .navbox .navpanel .panel-item .angle {
+    background-image: url(../images/nav-angle_f7c86b6.png);
+    width: 12px;
+    height: 7px;
+    position: absolute;
+    background-size: 100% 100%;
+    top: -7px;
+    left: 54px;
+    display: none;
+}
+
+.nav .navbox .navpanel .panel-item .item-box li a {
+    line-height: 29px;
+    display: block;
+    text-align: left;
+    margin-right: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+.nav .user-need {
+    float: right;
+    line-height: 42px;
+}
+
+.nav .user-need > a {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.nav .user-need > a >span img:first-child {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.nav .user-need > a >span img:nth-child(2) {
+    position: absolute;
+    width: 14px;
+    height: 15px;
+    top: 1px;
+    right: 0px;
+}
+
+#pager .warp {
+    width: 1000px;
+    margin: 20px auto 0 auto;
+}
+
+#pager .lesson-classfiy-nav {
+    position: relative;
+    width: 210px;
+    float: left;
+    border-right: 0;
+    height: 380px;
+    border: 1px solid #e4e4e4;
+    border-top: 2px solid #35b558;
+}
+
+.lesson-classfiy-nav li>div {
+    font-size: 13px;
+    width: 178px;
+    height: 37px;
+    line-height: 37px;
+    color: #333;
+    border-bottom: 1px solid #F5F5F5;
+    background: #fff url(../images/more-icon_d39346f.png) no-repeat;
+    background-position: 186px;
+    background-size: 6px 10px;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.lesson-classfiy-nav li>div:hover {
+    background: transparent;
+    border-left: 1px solid #35b558;
+    border-right: 4px solid #fff;
+}
+
+.lesson-classfiy-nav li>div:hover .lesson-list-show {
+    display: block;
+}
+
+.lesson-classfiy-nav li .lesson-list-show {
+    position: absolute;
+    top: -2px;
+    left: 211px;
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
+    border: 1px solid #e4e4e4;
+    background: #fff;
+    min-height: 380px;
+    min-width: 401px;
+    border-left: 0;
+    z-index: 1500;
+    display: none;
+}
+
+.lesson-classfiy-nav li .lesson-list-show dl {
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.lesson-classfiy-nav li .lesson-list-show dd {
+    display: block;
+    clear: both;
+    list-style: none;
+    margin-left: -8px;
+    padding: 3px 0;
+}
+
+.lesson-classfiy-nav li .lesson-list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
+
+.lesson-classfiy-nav li .lesson-list-show dd a:hover {
+    color: #35b558;
+}
+
+.lesson-center-focus {
+    width: 560px;
+    float: left;
+    margin-left: 10px;
+    overflow: hidden;
+}
+
+.lesson-center-focus .index-banner{
+    position: relative;
+    width: 560px;
+    height: 260px;
+    margin-left: auto;
+    background: #ccc;
+    border-right: 0;
+}
+
+#banner-left
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+}
+
+#banner-left:hover{
+    background: url(../images/banner-left_fe0df34.png) -10px -65px no-repeat;
+}
+
+#banner-right{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    display: block;
+    overflow: hidden;
+}
+
+#banner-right:hover{
+    background: url(../images/banner-right_a0bdd7d.png) -10px -65px no-repeat;
+}
+
+.lesson-center-focus .index-banner .content{
+    width: 4480px;
+    transform:translate3d(-560px, 0px, 0px);
+
+}
+
+.lesson-center-focus .index-banner .content a{
+   width: 560px; 
+   height: 260px;
+   display: block;
+   float:left;
+}
+
+.lesson-center-focus .index-banner .pagination{
+    position:absolute;
+    left:0;
+    width: 100%;
+    bottom: 7px;
+    text-align: center;
+}
+
+.lesson-center-focus .index-banner .pagination .switch{
+    display: inline-block;
+    width: 39px;
+    height: 7px;
+    background: url(../images/swiper1_6a811bf.jpg) center center no-repeat;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+
+/*达到撑开容器的目的*/
+.cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
