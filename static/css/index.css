@@ -344,7 +344,7 @@ li {
     overflow: hidden;
 }
 
-.lesson-center-focus .index-banner{
+.lesson-center-focus .index-banner {
     position: relative;
     width: 560px;
     height: 260px;
@@ -353,8 +353,7 @@ li {
     border-right: 0;
 }
 
-#banner-left
-{
+#banner-left {
     position: absolute;
     left: 0;
     top: 50%;
@@ -368,11 +367,11 @@ li {
     overflow: hidden;
 }
 
-#banner-left:hover{
+#banner-left:hover {
     background: url(../images/banner-left_fe0df34.png) -10px -65px no-repeat;
 }
 
-#banner-right{
+#banner-right {
     position: absolute;
     right: 0;
     top: 50%;
@@ -386,32 +385,31 @@ li {
     overflow: hidden;
 }
 
-#banner-right:hover{
+#banner-right:hover {
     background: url(../images/banner-right_a0bdd7d.png) -10px -65px no-repeat;
 }
 
-.lesson-center-focus .index-banner .content{
+.lesson-center-focus .index-banner .content {
     width: 4480px;
-    transform:translate3d(-560px, 0px, 0px);
-
+    transform: translate3d(-560px, 0px, 0px);
 }
 
-.lesson-center-focus .index-banner .content a{
-   width: 560px; 
-   height: 260px;
-   display: block;
-   float:left;
+.lesson-center-focus .index-banner .content a {
+    width: 560px;
+    height: 260px;
+    display: block;
+    float: left;
 }
 
-.lesson-center-focus .index-banner .pagination{
-    position:absolute;
-    left:0;
+.lesson-center-focus .index-banner .pagination {
+    position: absolute;
+    left: 0;
     width: 100%;
     bottom: 7px;
     text-align: center;
 }
 
-.lesson-center-focus .index-banner .pagination .switch{
+.lesson-center-focus .index-banner .pagination .switch {
     display: inline-block;
     width: 39px;
     height: 7px;
@@ -420,8 +418,129 @@ li {
     cursor: pointer;
 }
 
+.lesson-center-focus .focuswork {
+    position: relative;
+    width: 558px;
+    margin-top:13px;
+    height: 108px;
+    margin-left: auto;
+    border: 1px solid #E2E2E2;
+}
+
+.lesson-center-focus .focuswork .content
+{
+    width: 2053.33px;
+    height: 100%;
+}
+
+.lesson-center-focus .focuswork .lession-item
+{
+    display: block;
+    float: left;
+    border-right: 1px solid #F5F5F5;
+    height: 100%;
+    width: 185.5px;
+}
+
+
+.lesson-center-focus .focuswork .lession-item .lession-icon
+{
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 8px auto;
+}
+
+.lesson-center-focus .focuswork .lession-item .lession-title
+{
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.lesson-center-focus .focuswork .lession-item .intro
+{
+    font-size: 12px;
+    text-align: center;
+    color: #666;
+}
+
+.lesson-center-focus .focuswork .arrow-left{
+    position: absolute;
+    left: 0px;
+    top:50%;
+    margin-top:-20px;
+    background:url(../images/focus-nav_4593a01.png) center center no-repeat;
+    background-position: 0px 0px;
+    background-size: 48px 80px;
+    width: 24px;
+    height: 40px;
+}
+
+.lesson-center-focus .focuswork .arrow-left:hover{
+    background-position: 0px -40px;
+}
+
+.lesson-center-focus .focuswork .arrow-right{
+    position: absolute;
+    right: 0px;
+    top:50%;
+    margin-top:-20px;
+    background:url(../images/focus-nav_4593a01.png) center center no-repeat;
+    background-position: -24px 0px;
+    background-size: 48px 80px;
+    width: 24px;
+    height: 40px;
+}
+
+.lesson-center-focus .focuswork .arrow-right:hover{
+    background-position: -24px -40px;
+}
+
+.lesson-right-show{
+    width: 206px;
+    float: left;
+    border: 1px solid #E4E4E4;
+    height: 381px;
+    overflow: hidden;
+    margin-left: 10px
+}
+
+.lesson-right-show .news{
+    padding: 0 13px;
+    height: 125px;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.lesson-right-show .news h3 {
+    margin-top: 10px;
+    color: #333;
+    font-size: 14px;
+}
+
+.lesson-right-show .news .list {
+    margin-top: 5px;
+}
+
+.lesson-right-show .news .list .item a {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 1.8;
+}
+
+.lesson-right-show .userinfo {
+    height: 86px;
+    border-bottom: 1px solid #E4E4E4;
+    overflow: hidden;
+}
 
 /*达到撑开容器的目的*/
+
 .cf:after {
     content: '';
     display: block;
