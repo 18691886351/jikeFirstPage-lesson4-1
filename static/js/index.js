@@ -25,6 +25,9 @@ $(document).ready(function() {
     鼠标划过hot-lession时,改变该栏目的样式，还原其他栏目的样式
     并显示对应hot-lessionbox中的lession-list，并隐藏其他兄弟元素。
     */
+    $(".hot-lessionbox .lession-list").eq(0).show();
+    $(".hot-lessionbox .lession-list").eq(0).siblings().hide();
+
     $(".hot-lession ul li").each(function(i) {
         $(this).mouseover(function() {
         	/*alert(i);*/
