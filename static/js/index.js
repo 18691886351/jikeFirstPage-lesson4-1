@@ -21,6 +21,19 @@ $(document).ready(function() {
         });
     });
 
+    /*
+    鼠标划过hot-lession时,改变该栏目的样式，还原其他栏目的样式
+    并显示对应hot-lessionbox中的lession-list，并隐藏其他兄弟元素。
+    */
+    $(".hot-lession ul li").each(function(i) {
+        $(this).mouseover(function() {
+        	/*alert(i);*/
+            $(this).addClass("on");
+            $(this).siblings().removeClass("on");
+            $(".hot-lessionbox .lession-list").eq(i).show();
+            $(".hot-lessionbox .lession-list").eq(i).siblings().hide();
+        });
+    });
 
     /*
 	.hot-lessionbox ul li .lession-info
@@ -29,19 +42,19 @@ $(document).ready(function() {
     */
     $(".hot-lessionbox ul li .lession-info").each(function() {
         $(this).mouseover(function() {
-            $(this).children(".level-info").show();
-            $(this).children(".number-info").show();
+            $(this).children(".timeandlevel").children(".level-info").show();
+            $(this).children(".timeandlevel").children(".number-info").show();
             /*if (!$(this).children("p").is(":animated")) {
                 $(this).children("p").slideDown();
             }*/
             if ($(this).children("p").is(":animated")) {
                 $(this).children("p").stop();
             }
-            $(this).children("p").slideToggle("fast");
+            $(this).children("p").slideDown("fast");
         });
         $(this).mouseout(function() {
-            $(this).children(".level-info").hide();
-            $(this).children(".number-info").hide();
+            $(this).children(".timeandlevel").children(".level-info").hide();
+            $(this).children(".timeandlevel").children(".number-info").hide();
             /* 
             if (!$(this).children("p").is(":animated")) {
                             $(this).children("p").slideUp();
@@ -49,7 +62,7 @@ $(document).ready(function() {
             if ($(this).children("p").is(":animated")) {
                 $(this).children("p").stop();
             }
-            $(this).children("p").slideToggle("fast");
+            $(this).children("p").slideUp("fast");
         });
     });
     /*
