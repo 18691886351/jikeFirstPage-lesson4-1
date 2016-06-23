@@ -5,7 +5,6 @@
     font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
 }
 
-
 a:visited,
 a:link,
 a:active {
@@ -17,24 +16,30 @@ a:hover {
     color: #35b558;
 }
 
+
 /*
 1.怪异盒子模型的稳定性比正常盒子模型要好。体现在界面的缩放、扩大。
 而且在对有边框的对象排版上，也显得规整一些。
 
 */
-ul,li, a,div,img{
+
+ul,
+li,
+a,
+div,
+img {
     box-sizing: border-box;
 }
 
-ul,li {
+ul,
+li {
     list-style-type: none;
 }
 
-body{
+body {
     min-height: 2000px;
     min-width: 1000px;
 }
-
 
 #header {
     width: 1000px;
@@ -436,20 +441,18 @@ body{
 .lesson-center-focus .focuswork {
     position: relative;
     width: 558px;
-    margin-top:13px;
+    margin-top: 13px;
     height: 108px;
     margin-left: auto;
     border: 1px solid #E2E2E2;
 }
 
-.lesson-center-focus .focuswork .content
-{
+.lesson-center-focus .focuswork .content {
     width: 2053.33px;
     height: 100%;
 }
 
-.lesson-center-focus .focuswork .lession-item
-{
+.lesson-center-focus .focuswork .lession-item {
     display: block;
     float: left;
     border-right: 1px solid #F5F5F5;
@@ -457,63 +460,59 @@ body{
     width: 185.5px;
 }
 
-
-.lesson-center-focus .focuswork .lession-item .lession-icon
-{
+.lesson-center-focus .focuswork .lession-item .lession-icon {
     width: 40px;
     height: 40px;
     display: block;
     margin: 8px auto;
 }
 
-.lesson-center-focus .focuswork .lession-item .lession-title
-{
+.lesson-center-focus .focuswork .lession-item .lession-title {
     font-size: 12px;
     color: #333;
     text-align: center;
     margin-bottom: 4px;
 }
 
-.lesson-center-focus .focuswork .lession-item .intro
-{
+.lesson-center-focus .focuswork .lession-item .intro {
     font-size: 12px;
     text-align: center;
     color: #666;
 }
 
-.lesson-center-focus .focuswork .arrow-left{
+.lesson-center-focus .focuswork .arrow-left {
     position: absolute;
     left: 0px;
-    top:50%;
-    margin-top:-20px;
-    background:url(../images/focus-nav_4593a01.png) center center no-repeat;
+    top: 50%;
+    margin-top: -20px;
+    background: url(../images/focus-nav_4593a01.png) center center no-repeat;
     background-position: 0px 0px;
     background-size: 48px 80px;
     width: 24px;
     height: 40px;
 }
 
-.lesson-center-focus .focuswork .arrow-left:hover{
+.lesson-center-focus .focuswork .arrow-left:hover {
     background-position: 0px -40px;
 }
 
-.lesson-center-focus .focuswork .arrow-right{
+.lesson-center-focus .focuswork .arrow-right {
     position: absolute;
     right: 0px;
-    top:50%;
-    margin-top:-20px;
-    background:url(../images/focus-nav_4593a01.png) center center no-repeat;
+    top: 50%;
+    margin-top: -20px;
+    background: url(../images/focus-nav_4593a01.png) center center no-repeat;
     background-position: -24px 0px;
     background-size: 48px 80px;
     width: 24px;
     height: 40px;
 }
 
-.lesson-center-focus .focuswork .arrow-right:hover{
+.lesson-center-focus .focuswork .arrow-right:hover {
     background-position: -24px -40px;
 }
 
-.lesson-right-show{
+.lesson-right-show {
     width: 206px;
     float: left;
     border: 1px solid #E4E4E4;
@@ -522,7 +521,7 @@ body{
     margin-left: 10px
 }
 
-.lesson-right-show .news{
+.lesson-right-show .news {
     padding: 10px 13px 0px 13px;
     height: 135px;
     border-bottom: 1px solid #E4E4E4;
@@ -563,7 +562,6 @@ body{
     float: left;
     width: 140px;
 }
-
 
 .lesson-right-show .userinfo .name-wrap .hello-word {
     margin-top: 10px;
@@ -608,21 +606,21 @@ body{
     text-align: center;
 }
 
-.recommend li{
+.recommend li {
     display: block;
     width: 51px;
     height: 80px;
-    float:left;
+    float: left;
     border-bottom: 1px solid red;
     border-right: 1px solid red;
-    text-align:center;
+    text-align: center;
     font-size: 12px;
     line-height: 23px;
     text-align: center;
-    color:#333;
+    color: #333;
 }
 
-.recommend li .icon{
+.recommend li .icon {
     background-image: url(../images/recommend_4a9a464.png);
     display: block;
     width: 25px;
@@ -631,39 +629,37 @@ body{
     background-size: 71px 232px;
 }
 
-
-.recommend li .question{
+.recommend li .question {
     background-position: -5px -3px;
 }
 
-.recommend li .wiki{
+.recommend li .wiki {
     background-position: -5px -31px;
 }
 
-.recommend li .lession{
+.recommend li .lession {
     background-position: -5px -59px;
 }
 
-.recommend li .group{
+.recommend li .group {
     background-position: -5px -87px;
 }
 
-.recommend li .download{
+.recommend li .download {
     background-position: -5px -115px;
 }
 
-.recommend li .knowledge{
+.recommend li .knowledge {
     background-position: -5px -143px;
 }
 
-.recommend li .occupation{
+.recommend li .occupation {
     background-position: -5px -171px;
 }
 
-.recommend li .vip{
+.recommend li .vip {
     background-position: -5px -199px;
 }
-
 
 .recommend li .angle-bottom {
     display: block;
@@ -677,58 +673,56 @@ body{
     margin: 0 auto;
 }
 
-#pager .hot-lession{
+#pager .hot-lession {
     width: 1000px;
-    margin:20px auto 0 auto;    
+    margin: 20px auto 0 auto;
 }
 
-.hot-lession ul{
+.hot-lession ul {
     height: 41px;
     background: url(http://s1.jikexueyuan.com/index/images/hotnav_bc_f22b37e.jpg) 0 100% repeat-x;
 }
 
-
-.hot-lession ul li{
+.hot-lession ul li {
     width: 16.6%;
     display: block;
-    float:left;
+    float: left;
     text-align: center;
-    font-size:14px;
-    color:#333;
+    font-size: 14px;
+    color: #333;
     line-height: 41px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.hot-lession ul li.on{
+.hot-lession ul li.on {
     border-bottom: 2px solid #35b558;
     background: url(http://s1.jikexueyuan.com/index/images/index-sj_cc73747.png) center bottom no-repeat;
     background-size: 10px 4px;
     color: #35b558;
 }
 
-
-#pager .hot-lessionbox{
+#pager .hot-lessionbox {
     width: 1000px;
-    margin:20px auto 0 auto; 
+    margin: 20px auto 0 auto;
 }
 
-#pager .hot-lessionbox ul{
-    width:1100px;
+#pager .hot-lessionbox ul {
+    width: 1100px;
 }
 
-#pager .hot-lessionbox ul li{
+#pager .hot-lessionbox ul li {
     float: left;
     width: 235px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-.hot-lessionbox ul li .lession-header{
+.hot-lessionbox ul li .lession-header {
     position: relative;
-    cursor:pointer;
+    cursor: pointer;
 }
 
-.hot-lessionbox ul li .lession-header .free-icon{
+.hot-lessionbox ul li .lession-header .free-icon {
     height: 22px;
     width: 38px;
     display: inline-block;
@@ -739,56 +733,54 @@ body{
     background: url(../images/icon_7f8b929.png) -58px -43px no-repeat;
 }
 
-.hot-lessionbox ul li .lession-header .lession-icon{
+.hot-lessionbox ul li .lession-header .lession-icon {
     display: block;
-    width:100%;
-    height:125px;
+    width: 100%;
+    height: 125px;
 }
 
-.hot-lessionbox ul li .lession-header .lessionplay-back{
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100%;
+.hot-lessionbox ul li .lession-header .lessionplay-back {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.4);
-    opacity:0;
+    background: rgba(0, 0, 0, .4);
+    opacity: 0;
 }
 
 .hot-lessionbox ul li:hover .lession-header .lessionplay-back {
-    opacity:1;
+    opacity: 1;
 }
 
-
-
-.hot-lessionbox ul li .lession-header .lessionplay-back .lessionplay{
+.hot-lessionbox ul li .lession-header .lessionplay-back .lessionplay {
     position: absolute;
     background: url(http://s1.jikexueyuan.com/common/images/player_icon_5c67475.png) 0 0 no-repeat;
     z-index: 120;
     width: 50px;
     height: 50px;
     background-size: 50px 50px;
-    top:50%;
-    left:50%;
-    margin-top:-25px;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
     margin-left: -25px;
 }
 
-.hot-lessionbox ul li .lession-info-shell{
+.hot-lessionbox ul li .lession-info-shell {
     position: relative;
     height: 75px;
 }
 
-.hot-lessionbox ul li .lession-info{
+.hot-lessionbox ul li .lession-info {
     position: absolute;
     padding: 10px;
     width: 235px;
-    z-index:800;
-    border:1px solid #e4e4e4;
-    background-color:#fff;
+    z-index: 800;
+    border: 1px solid #e4e4e4;
+    background-color: #fff;
 }
 
-.hot-lessionbox ul li .lession-info .lession-title{
+.hot-lessionbox ul li .lession-info .lession-title {
     display: block;
     font-size: 14px;
     color: #333;
@@ -798,80 +790,135 @@ body{
     text-align: center;
 }
 
-.hot-lessionbox ul li .lession-info p{
+.hot-lessionbox ul li .lession-info p {
     color: gray;
     font-size: 12px;
     line-height: 18px;
     overflow: hidden;
     margin-bottom: 10px;
-    height:52px;
+    height: 52px;
     display: none;
 }
 
-.hot-lessionbox ul li .lession-info .timeandlevel{
+.hot-lessionbox ul li .lession-info .timeandlevel {
     position: relative;
 }
 
-.hot-lessionbox ul li .lession-info .time-info{
+.hot-lessionbox ul li .lession-info .time-info {
     width: 120px;
 }
-.hot-lessionbox ul li .lession-info .time-info .time-icon{
+
+.hot-lessionbox ul li .lession-info .time-info .time-icon {
     height: 14px;
     width: 14px;
-    display:block;
-    float:left;
-    margin:3px 8px 0 0;
+    display: block;
+    float: left;
+    margin: 3px 8px 0 0;
     background: url(../images/clok_a413ecf.png) 0 0 no-repeat;
     background-size: 14px 14px;
-
-}
-.hot-lessionbox ul li .lession-info .time-info .time-text{
-    font-size:12px;
-    color:gray;
 }
 
-.hot-lessionbox ul li .lession-info .level-info{
-    margin-top:10px;
+.hot-lessionbox ul li .lession-info .time-info .time-text {
+    font-size: 12px;
+    color: gray;
+}
+
+.hot-lessionbox ul li .lession-info .level-info {
+    margin-top: 10px;
     width: 120px;
     display: none;
 }
 
-.hot-lessionbox ul li .lession-info .level-info .level-icon{
+.hot-lessionbox ul li .lession-info .level-info .level-icon {
     width: 14px;
     height: 14px;
     display: block;
     float: left;
-    margin:3px 8px 0 0;
+    margin: 3px 8px 0 0;
 }
 
-.hot-lessionbox ul li .lession-info .level-info .chuji{
-    background:url(../images/one-ji_1731712.png) 0 0 no-repeat;
+.hot-lessionbox ul li .lession-info .level-info .chuji {
+    background: url(../images/one-ji_1731712.png) 0 0 no-repeat;
     background-size: 14px 14px;
 }
-.hot-lessionbox ul li .lession-info .level-info .level-text{
-    font-size:12px;
-    color:gray;
+
+.hot-lessionbox ul li .lession-info .level-info .level-text {
+    font-size: 12px;
+    color: gray;
 }
 
-
-.hot-lessionbox ul li .lession-info .number-info{
+.hot-lessionbox ul li .lession-info .number-info {
     position: absolute;
-    right:0;
+    right: 0;
     top: 4px;
     font-size: 12px;
     color: gray;
     display: none;
 }
 
-.hot-lessionbox ul li .lession-info .lessionicon-box{
+.hot-lessionbox ul li .lession-info .lessionicon-box {
     position: absolute;
     right: 0px;
     bottom: 0px;
 }
 
-.hot-lessionbox ul li .lession-info .lessionicon-box img{
+.hot-lessionbox ul li .lession-info .lessionicon-box img {
     width: 16px;
     height: 16px;
+}
+
+#pager .project-path .learn-way {
+    width: 1000px;
+    margin: 20px auto 0 auto;
+}
+
+.project-path .learn-way .learn-way-title strong {
+    font-size: 18px;
+    color: #333;
+    float: left;
+    font-weight: 500;
+}
+
+.project-path .learn-way .learn-way-title .question-icon {
+    background: #999;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 13px;
+    margin: 5px 8px 0 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.project-path .learn-way .learn-way-title .question-mark {
+    float: left;
+    position: relative;
+    width: 160px;
+    box-shadow: 1px 1px 3px #ccc;
+    border: 1px solid #e4e4e4;
+    opacity: 0;
+}
+
+.project-path .learn-way .learn-way-title .question-mark .angle {
+    background: url(http://s1.jikexueyuan.com/index/images/title-sj_adebc06.jpg) center center no-repeat;
+    width: 5px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    z-index: 10;
+}
+
+.project-path .learn-way .learn-way-title .question-mark .text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding:0 5px;
 }
 
 

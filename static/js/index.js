@@ -22,6 +22,33 @@ $(document).ready(function() {
     });
 
     /*
+    对职业路径模块question-icon 
+    鼠标进过，显示question-mark
+    鼠标out，隐藏
+    有淡入淡出效果
+    */
+    $(".project-path .learn-way .learn-way-title .question-icon").mouseover(function() {
+        if ($(".project-path .learn-way .learn-way-title .question-mark").is(":animated")) {
+            $(".project-path .learn-way .learn-way-title .question-mark").stop();
+        }
+        $(".project-path .learn-way .learn-way-title .question-mark").animate({
+            marginLeft: '2px',
+            opacity: '1'
+        }, "slow");
+    });
+
+    $(".project-path .learn-way .learn-way-title .question-icon").mouseout(function() {
+        if ($(".project-path .learn-way .learn-way-title .question-mark").is(":animated")) {
+            $(".project-path .learn-way .learn-way-title .question-mark").stop();
+        }
+        $(".project-path .learn-way .learn-way-title .question-mark").animate({
+            marginLeft :'0',
+            opacity:'0'
+        }, "slow");
+    });
+
+
+    /*
     鼠标划过hot-lession时,改变该栏目的样式，还原其他栏目的样式
     并显示对应hot-lessionbox中的lession-list，并隐藏其他兄弟元素。
     */
@@ -30,7 +57,7 @@ $(document).ready(function() {
 
     $(".hot-lession ul li").each(function(i) {
         $(this).mouseover(function() {
-        	/*alert(i);*/
+            /*alert(i);*/
             $(this).addClass("on");
             $(this).siblings().removeClass("on");
             $(".hot-lessionbox .lession-list").eq(i).show();
@@ -39,9 +66,9 @@ $(document).ready(function() {
     });
 
     /*
-	.hot-lessionbox ul li .lession-info
-	鼠标在mouseover其中一个lession时,显示level_info和numberinfo,文字段落向下滑动
-	鼠标在mouseout其中一个lession时,隐藏level_info和numberinfo，文字段落向上收起
+    .hot-lessionbox ul li .lession-info
+    鼠标在mouseover其中一个lession时,显示level_info和numberinfo,文字段落向下滑动
+    鼠标在mouseout其中一个lession时,隐藏level_info和numberinfo，文字段落向上收起
     */
     $(".hot-lessionbox ul li .lession-info").each(function() {
         $(this).mouseover(function() {
