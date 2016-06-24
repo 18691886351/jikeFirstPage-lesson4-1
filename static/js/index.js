@@ -27,21 +27,21 @@ $(document).ready(function() {
     鼠标out，隐藏
     有淡入淡出效果
     */
-    $(".project-path .learn-way .learn-way-title .question-icon").mouseover(function() {
-        if ($(".project-path .learn-way .learn-way-title .question-mark").is(":animated")) {
-            $(".project-path .learn-way .learn-way-title .question-mark").stop();
+    $(".learn-way .learn-way-title .question-icon").mouseover(function() {
+        if ($(".learn-way .learn-way-title .question-mark").is(":animated")) {
+            $(".learn-way .learn-way-title .question-mark").stop();
         }
-        $(".project-path .learn-way .learn-way-title .question-mark").animate({
+        $(".learn-way .learn-way-title .question-mark").animate({
             marginLeft: '2px',
             opacity: '1'
         }, "slow");
     });
 
-    $(".project-path .learn-way .learn-way-title .question-icon").mouseout(function() {
-        if ($(".project-path .learn-way .learn-way-title .question-mark").is(":animated")) {
-            $(".project-path .learn-way .learn-way-title .question-mark").stop();
+    $(".learn-way .learn-way-title .question-icon").mouseout(function() {
+        if ($(".learn-way .learn-way-title .question-mark").is(":animated")) {
+            $(".learn-way .learn-way-title .question-mark").stop();
         }
-        $(".project-path .learn-way .learn-way-title .question-mark").animate({
+        $(".learn-way .learn-way-title .question-mark").animate({
             marginLeft :'0',
             opacity:'0'
         }, "slow");

@@ -869,7 +869,12 @@ body {
 
 #pager .project-path .learn-way {
     width: 1000px;
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
+}
+
+.project-path .learn-way .learn-way-title {
+    width: 1000px;
+    margin-bottom: 18px;
 }
 
 .project-path .learn-way .learn-way-title strong {
@@ -904,7 +909,7 @@ body {
 }
 
 .project-path .learn-way .learn-way-title .question-mark .angle {
-    background: url(http://s1.jikexueyuan.com/index/images/title-sj_adebc06.jpg) center center no-repeat;
+    background: url(../images/title-sj_adebc06.jpg) center center no-repeat;
     width: 5px;
     height: 10px;
     display: block;
@@ -918,7 +923,168 @@ body {
     height: 20px;
     line-height: 20px;
     font-size: 12px;
-    padding:0 5px;
+    padding: 0 5px;
+}
+
+.project-path .learn-way .learn-way-title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+
+.project-path .learn-way .learn-way-list ul{
+    border: 1px solid #E4E4E4;
+    border-top:0;
+    border-right: 0;
+    border-left: 0;
+}
+
+.project-path .learn-way .learn-way-list ul li {
+    width: 20%;
+    border: 1px solid #E4E4E4;
+    float: left;
+    text-align: center;
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    text-align: center;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.project-path .learn-way .learn-way-list ul li:nth-child(5n+0) {
+    border-right: 1px solid #E4E4E4;
+}
+
+
+.project-path .learn-way .learn-way-list ul li:hover {
+    border:1px solid rgb(53,181,88);
+}
+
+
+.project-path .learn-way .learn-way-list ul li a img {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.project-path .learn-way .learn-way-list ul li a .learn-way-title {
+    display: block;
+    width: 200px;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 20px;
+    height: 18px;
+    overflow: hidden;
+}
+
+.project-path .learn-way .learn-way-list ul li a p {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    height: 20px;
+    width: 199px;
+    overflow: hidden;
+}
+
+.project-path .learn-way .learn-way-list ul li a .btn {
+    width: 140px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: 0;
+    color: #35b558;
+    font-size: 16px;
+    background: #f3fff6;
+    border: 1px solid #35b558;
+}
+
+.project-path .learn-way .learn-way-list ul li:hover a .btn  {
+    background: #35b558;
+    color: #fff;
+    border-color: #35b558;
+}
+
+#pager .system .learn-way {
+    width: 1000px;
+    margin: 20px auto 0 auto;
+}
+
+.system .learn-way .learn-way-title {
+    width: 1000px;
+    margin-bottom: 18px;
+}
+
+.system .learn-way .learn-way-title strong {
+    font-size: 18px;
+    color: #333;
+    float: left;
+    font-weight: 500;
+}
+
+.system .learn-way .learn-way-title .question-icon {
+    background: #999;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 13px;
+    margin: 5px 8px 0 8px;
+    color: white;
+    cursor: pointer;
+}
+
+.system .learn-way .learn-way-title .question-mark {
+    float: left;
+    position: relative;
+    width: 160px;
+    box-shadow: 1px 1px 3px #ccc;
+    border: 1px solid #e4e4e4;
+    opacity: 0;
+}
+
+.system .learn-way .learn-way-title .question-mark .angle {
+    background: url(../images/title-sj_adebc06.jpg) center center no-repeat;
+    width: 5px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    z-index: 10;
+}
+
+.system .learn-way .learn-way-title .question-mark .text {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    padding: 0 5px;
+}
+
+.system .learn-way .learn-way-title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+
+.system .mapbox{
+    width: 1000px;
+    margin:20px auto 20px auto;
+}
+
+.system .mapbox ul li{
+    width: 16.6%;
+    height: 120px;
+    border:1px solid #E4E4E4;
+    border-right: 0;
+    border-bottom: 0;
 }
 
 
