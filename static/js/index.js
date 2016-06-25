@@ -21,29 +21,93 @@ $(document).ready(function() {
         });
     });
 
+
     /*
-    对职业路径模块question-icon 
+    wiki中li元素mouseover,改变自己的border颜色，同时修改自己相邻元素的border
+    避免造成li元素内容不稳定
+    1.li元素在初始化时候除第一个元素有border-left,其他兄弟元素都没有。
+    2.在鼠标滑过时将本元素的right,top,bottom改变颜色。
+    3.如果不存在前一个元素侧修改自己的left,否则修改前元素的right
+    */
+    $(".wiki .wikibox >ul>li").mouseover(function() {
+        $(this).css({
+            "border-right": "1px solid rgb(53, 181, 88)",
+            "border-top": "1px solid rgb(53, 181, 88)",
+            "border-bottom": "1px solid rgb(53, 181, 88)"
+        });
+        if ($(this).prev().length == 0) {
+            $(this).css({
+                "border-left": "1px solid rgb(53, 181, 88)"
+            });
+        }else{
+            $(this).prev().css("border-right","1px solid rgb(53, 181, 88)");
+        }
+
+    });
+
+    $(".wiki .wikibox >ul>li").mouseout(function() {
+        $(this).removeAttr("style");
+        if ($(this).prev().length != 0) {
+            $(this).prev().removeAttr("style");
+        }
+    });
+
+    /*
+    wiki中，鼠标mouseover过书的封面
+    1.显示左上角的“看一看”
+    2.img沿着最左侧Y轴旋转一定20deg.
+    mouseout时恢复原状
+    */
+    $(".wiki .wikibox >ul>li .content .cover li a .imgbox .fengmian").mouseover(function() {
+        $(this).parent().children(".look").show();
+        $(this).css({ "transform": "rotatey(20deg)" });
+    });
+
+    $(".wiki .wikibox >ul>li .content .cover li a .imgbox .fengmian").mouseout(function() {
+        $(this).parent().children(".look").hide();
+        $(this).css({ "transform": "rotatey(0)" });
+    });
+
+
+    /*
+    知识体系图实现mouseover翻转背面，mouseout再翻转的正面。
+    */
+    $(".system .mapbox ul li a").mouseover(function() {
+        $(this).children(".front").css({ "transform": "rotatey(180deg)" });
+        $(this).children(".back").css({ "transform": "rotatey(-360deg)" });
+    });
+
+    $(".system .mapbox ul li a").mouseout(function() {
+        $(this).children(".back").css({ "transform": "rotatey(-180deg)" });
+        $(this).children(".front").css({ "transform": "rotatey(360deg)" });
+    });
+
+
+    /*
+    对职业路径模块和知识体系图question-icon 
     鼠标进过，显示question-mark
     鼠标out，隐藏
     有淡入淡出效果
     */
     $(".learn-way .learn-way-title .question-icon").mouseover(function() {
-        if ($(".learn-way .learn-way-title .question-mark").is(":animated")) {
-            $(".learn-way .learn-way-title .question-mark").stop();
+
+        if ($(this).parent().children(".question-mark").is(":animated")) {
+            $(this).parent().children(".question-mark").stop();
         }
-        $(".learn-way .learn-way-title .question-mark").animate({
+        $(this).parent().children(".question-mark").animate({
             marginLeft: '2px',
             opacity: '1'
         }, "slow");
     });
 
     $(".learn-way .learn-way-title .question-icon").mouseout(function() {
-        if ($(".learn-way .learn-way-title .question-mark").is(":animated")) {
-            $(".learn-way .learn-way-title .question-mark").stop();
+
+        if ($(this).parent().children(".question-mark").is(":animated")) {
+            $(this).parent().children(".question-mark").stop();
         }
-        $(".learn-way .learn-way-title .question-mark").animate({
-            marginLeft :'0',
-            opacity:'0'
+        $(this).parent().children(".question-mark").animate({
+            marginLeft: '0',
+            opacity: '0'
         }, "slow");
     });
 
