@@ -21,6 +21,95 @@ $(document).ready(function() {
         });
     });
 
+    /*
+    medias-list
+    点击向左向右的箭头，到达一个滚动的效果。
+    */
+    var medias_list_cur = -958;
+    var medias_list_offer = 160;
+    var medias_list_max = ($(".medias .medias-list .content").width() - $(".medias .medias-list .content-shell").width()) * -1;
+    /*alert(enterprise_list_max);*/
+    $("#banner-left5").click(function() {
+        medias_list_cur = medias_list_cur + medias_list_offer
+        if (medias_list_cur > 0) {
+            medias_list_cur = 0;
+        }
+        medias_list_roll();
+    });
+
+    $("#banner-right5").click(function() {
+        medias_list_cur = medias_list_cur - medias_list_offer
+        if (medias_list_cur < medias_list_max) {
+            medias_list_cur = medias_list_max;
+        }
+         medias_list_roll();
+    });
+
+    function medias_list_roll() {
+        $(".medias .medias-list .content").css("transform", "translate3d("+ medias_list_cur+"px,0,0)");
+    }
+
+    /*
+    schools-list
+    点击向左向右的箭头，到达一个滚动的效果。
+    */
+    var schools_list_cur = -958;
+    var schools_list_offer = 137;
+    var schools_list_max = ($(".schools .schools-list .content").width() - $(".schools .schools-list .content-shell").width()) * -1;
+    /*alert(enterprise_list_max);*/
+    $("#banner-left4").click(function() {
+        schools_list_cur = schools_list_cur + schools_list_offer
+        if (schools_list_cur > 0) {
+            schools_list_cur = 0;
+        }
+        schools_list_roll();
+    });
+
+    $("#banner-right4").click(function() {
+        schools_list_cur = schools_list_cur - schools_list_offer
+        if (schools_list_cur < schools_list_max) {
+            schools_list_cur = schools_list_max;
+        }
+         schools_list_roll();
+    });
+
+    function schools_list_roll() {
+        $(".schools .schools-list .content").css("transform", "translate3d("+ schools_list_cur+"px,0,0)");
+    }
+
+    /*enterprise-list
+    点击向左向右的箭头，到达一个滚动的效果。
+    其中.content-shell是展示下面滚动画面的窗口
+    */
+    var enterprise_list_cur = -1277.33;
+    var enterprise_list_offer = 159.66;
+    var enterprise_list_max = ($(".enterprise .enterprise-list .content").width() - $(".enterprise .enterprise-list .content-shell").width()) * -1;
+    /*alert(enterprise_list_max);*/
+    $("#banner-left3").click(function() {
+        enterprise_list_cur = enterprise_list_cur + enterprise_list_offer
+        if (enterprise_list_cur > 0) {
+            enterprise_list_cur = 0;
+        }
+        enterprise_list_roll();
+    });
+
+    $("#banner-right3").click(function() {
+        enterprise_list_cur = enterprise_list_cur - enterprise_list_offer
+        if (enterprise_list_cur < enterprise_list_max) {
+            enterprise_list_cur = enterprise_list_max;
+        }
+        enterprise_list_roll();
+    });
+
+
+    function enterprise_list_roll() {
+        $(".enterprise .enterprise-list .content").css("transform", "translate3d(" + enterprise_list_cur + "px,0,0)");
+    }
+
+
+
+
+
 
     /*
     wiki中li元素mouseover,改变自己的border颜色，同时修改自己相邻元素的border
@@ -39,8 +128,8 @@ $(document).ready(function() {
             $(this).css({
                 "border-left": "1px solid rgb(53, 181, 88)"
             });
-        }else{
-            $(this).prev().css("border-right","1px solid rgb(53, 181, 88)");
+        } else {
+            $(this).prev().css("border-right", "1px solid rgb(53, 181, 88)");
         }
 
     });

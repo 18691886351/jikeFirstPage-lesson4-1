@@ -27,7 +27,10 @@ ul,
 li,
 a,
 div,
-img {
+img,
+dl,
+dt,
+dd {
     box-sizing: border-box;
 }
 
@@ -1416,19 +1419,19 @@ body {
     width: 1100px;
 }
 
-
 .wiki .wikibox >ul>li {
     float: left;
     display: block;
     border: 1px solid #e4e4e4;
     border-left: 0;
-    width:333.3px;
+    width: 333.3px;
     padding: 15px;
 }
 
 .wiki .wikibox >ul>li:nth-child(1) {
     border-left: 1px solid #e4e4e4;
 }
+
 
 /* .wiki .wikibox >ul>li:hover{
     border: 1px solid rgb(53, 181, 88);
@@ -1450,7 +1453,7 @@ body {
     float: left;
 }
 
-.wiki .wikibox >ul>li .content .cover li:nth-child(2){
+.wiki .wikibox >ul>li .content .cover li:nth-child(2) {
     margin-right: 0px;
 }
 
@@ -1493,7 +1496,6 @@ body {
     color: #35b558;
 }
 
-
 .wiki .wikibox >ul >li .content .cover li a h3 {
     font-size: 13px;
     color: #333;
@@ -1530,7 +1532,7 @@ body {
     color: #666;
 }
 
-.wiki .wikibox >ul >li .catalog li a:hover p{
+.wiki .wikibox >ul >li .catalog li a:hover p {
     color: #35b558;
 }
 
@@ -1545,7 +1547,7 @@ body {
     float: left;
 }
 
-.wiki .wikibox >ul >li .catalog li a:hover span{
+.wiki .wikibox >ul >li .catalog li a:hover span {
     color: #35b558;
 }
 
@@ -1563,7 +1565,7 @@ body {
     margin: 20px auto 40px auto;
 }
 
-.enterprise .title{
+.enterprise .title {
     width: 100%;
     margin-bottom: 18px;
 }
@@ -1582,14 +1584,15 @@ body {
     margin-top: 4px;
 }
 
-.enterprise .enterprise-list{
+.enterprise .enterprise-list {
     border: 1px solid #E4E4E4;
     height: 90px;
     padding: 20px;
     position: relative;
+    background-color: #fff;
 }
 
-.enterprise .enterprise-list .arrow-left{
+.enterprise .enterprise-list .arrow-left {
     display: block;
     position: absolute;
     left: 0;
@@ -1597,13 +1600,18 @@ body {
     margin-top: -25px;
     z-index: 800;
     cursor: pointer;
-    background: url(http://s1.jikexueyuan.com/index/images/banner-left_fe0df34.png) -10px -5px no-repeat;
+    background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
     width: 40px;
     height: 50px;
     overflow: hidden;
+    display: none;
 }
 
-.enterprise .enterprise-list .arrow-right{
+.enterprise .enterprise-list:hover .arrow-left {
+    display: block;
+}
+
+.enterprise .enterprise-list .arrow-right {
     display: block;
     position: absolute;
     right: 0;
@@ -1611,10 +1619,424 @@ body {
     margin-top: -25px;
     z-index: 800;
     cursor: pointer;
-    background: url(http://s1.jikexueyuan.com/index/images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
+    background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
     width: 40px;
     height: 50px;
     overflow: hidden;
+    display: none;
+}
+
+.enterprise .enterprise-list:hover .arrow-right {
+    display: block;
+}
+
+.enterprise .enterprise-list .content-shell {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.enterprise .enterprise-list .content {
+    width: 5280px;
+    height: 50px;
+    transform: translate3d(-1277.33px, 0, 0);
+    transition: all .5s linear;
+}
+
+.enterprise .enterprise-list .content a {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #e4e4e4;
+}
+
+.enterprise .enterprise-list .content a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*================================合作院校=============================*/
+
+
+/*=====================================================================*/
+
+#pager .schools {
+    width: 1000px;
+    margin: 20px auto 40px auto;
+}
+
+.schools .title {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.schools .title strong {
+    font-size: 18px;
+    color: #333;
+    float: left;
+    font-weight: 500;
+}
+
+.schools .title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+
+.schools .schools-list {
+    border: 1px solid #E4E4E4;
+    height: 150px;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+.schools .schools-list .arrow-left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    display: none;
+}
+
+.schools .schools-list:hover .arrow-left {
+    display: block;
+}
+
+.schools .schools-list .arrow-right {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    display: none;
+}
+
+.schools .schools-list:hover .arrow-right {
+    display: block;
+}
+
+.schools .schools-list .content-shell {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.schools .schools-list .content {
+    width: 3699px;
+    height: 110px;
+    transform: translate3d(-958px, 0, 0);
+    transition: all .5s linear;
+}
+
+.schools .schools-list .content a {
+    display: block;
+    float: left;
+    width: 110px;
+    height: 100%;
+    margin-right: 27px;
+    /* border: 1px solid #e4e4e4; */
+}
+
+.schools .schools-list .content a img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*=======================媒体报道==========================*/
+
+
+/*=========================================================*/
+
+#pager .medias {
+    width: 1000px;
+    margin: 20px auto 40px auto;
+}
+
+.medias .title {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.medias .title strong {
+    font-size: 18px;
+    color: #333;
+    float: left;
+    font-weight: 500;
+}
+
+.medias .title .more-lesson {
+    font-size: 12px;
+    color: #2d85ca;
+    float: right;
+    margin-top: 4px;
+}
+
+.medias .medias-list {
+    border: 1px solid #E4E4E4;
+    height: 90px;
+    padding: 20px;
+    position: relative;
+    background-color: #fff;
+}
+
+.medias .medias-list .arrow-left {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    display: none;
+}
+
+.medias .medias-list:hover .arrow-left {
+    display: block;
+}
+
+.medias .medias-list .arrow-right {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 800;
+    cursor: pointer;
+    background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
+    width: 40px;
+    height: 50px;
+    overflow: hidden;
+    display: none;
+}
+
+.medias .medias-list:hover .arrow-right {
+    display: block;
+}
+
+.medias .medias-list .content-shell {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.medias .medias-list .content {
+    width: 4160px;
+    height: 50px;
+    transform: translate3d(-958px, 0, 0);
+    transition: all .5s linear;
+}
+
+.medias .medias-list .content a {
+    display: block;
+    float: left;
+    width: 150px;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #e4e4e4;
+}
+
+.medias .medias-list .content a img {
+    width: 100%;
+    height: 100%;
+}
+
+#footer {
+    min-width: 1000px;
+}
+
+#footer .jkinfor-block {
+    background: #fafafa;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#footer .jkinfor-block .jkinfor {
+    width: 1000px;
+    margin: 0 auto;
+    min-height: 200px;
+}
+
+#footer .jkinfor dl {
+    width: 185px;
+    padding-left: 30px;
+    color: gray;
+    margin: 25px 0;
+    float: left;
+    border-left: 1px solid #E4E4E4;
+    min-height: 175px;
+}
+
+#footer .jkinfor dl dt {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+#footer .jkinfor dl dd {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#footer .jkinfor a {
+    color: gray;
+    padding-left: 5px;
+}
+
+#footer .search-share {
+    width: 260px;
+    float: left;
+    min-height: 226px;
+    border-left: 1px solid #E4E4E4;
+    padding: 20px 0 0 40px;
+}
+
+#footer .search-share .jktxt {
+    font-size: 15px;
+    color: #35b558;
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+#footer .search-share .app-download a {
+    display: block;
+}
+
+#footer .search-share .app-download img {
+    display: block;
+    float: left;
+    margin-right: 15px;
+    width: 21px;
+    vertical-align: middle;
+}
+
+#footer .search-share .app-download strong {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+#footer .search-share .app-download p {
+    font-size: 14px;
+    color: gray;
+    background: url(http://s1.jikexueyuan.com/common/images/more-icon_d39346f.png) 160px center no-repeat;
+    background-size: 7px 13px;
+}
+
+#footer .search-share .share {
+    margin-top: 15px;
+}
+
+#footer .search-share .share a {
+    background: url(http://s1.jikexueyuan.com/common/images/icon_7f8b929.png) -23px 0 no-repeat;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+#footer .search-share .share a.sina-icon {
+    background-position: -23px 0;
+}
+
+#footer .search-share .share a.tieba-icon {
+    background-position: -145px 0;
+}
+
+#footer .search-share .share a.qq-icon {
+    background-position: -23px -82px;
+}
+
+#footer .search-share .share a.qq-icon .weinxinpop {
+    position: absolute;
+    bottom: 32px;
+    left: -48px;
+    z-index: 200;
+    display: none;
+}
+
+#footer .search-share .share a.qq-icon:hover .weinxinpop {
+    display: block;
+}
+
+#footer .kefu-online {
+    margin-top: 15px;
+    padding-left: 35px;
+}
+
+#footer .kefu-online .apply {
+    display: block;
+}
+
+
+/*在选则一个有两个类的元素 可以类似.kefu-icon.online*/
+
+#footer .kefu-online .kefu-icon.online {
+    background-position: 0 0;
+}
+
+#footer .kefu-online .kefu-icon {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: -40px;
+    background: url(http://s1.jikexueyuan.com/common/images/kefu_8edc734.png) no-repeat -40px 0/80px 40px;
+}
+
+#footer .kefu-online h5 {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2px;
+    line-height: 22px;
+    padding-left: 5px;
+}
+
+#footer .kefu-online p {
+    color: gray;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+#footer .copyright {
+    font-size: 12px;
+    color: #999;
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    padding: 20px
+}
+
+#footer .copyright a {
+    color: #999;
+}
+
+#footer .copyright strong {
+    font-weight: 400;
 }
 
 
