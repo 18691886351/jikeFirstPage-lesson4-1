@@ -199,7 +199,7 @@ body {
 .nav .navbox .navpanel {
     position: absolute;
     top: 42px;
-    width: 950px;
+    width: 1000px;
     background: rgba(255, 255, 255, .97);
     border: 1px solid #e8e8e8;
     /* border-top: 0; */
@@ -221,7 +221,7 @@ body {
     padding-top: 10px;
     padding-bottom: 14px;
     height: 100%;
-    width: 104px;
+    width: 130px;
 }
 
 .nav .navbox:hover .navpanel {
@@ -290,7 +290,7 @@ body {
 
 .lesson-classfiy-nav li>div {
     font-size: 13px;
-    width: 178px;
+    width: 100%;
     height: 37px;
     line-height: 37px;
     color: #333;
@@ -305,7 +305,8 @@ body {
 .lesson-classfiy-nav li>div:hover {
     background: transparent;
     border-left: 1px solid #35b558;
-    border-right: 4px solid #fff;
+    border-right: 2px solid #fff;
+    width:101%;
 }
 
 .lesson-classfiy-nav li>div:hover .lesson-list-show {
@@ -315,7 +316,7 @@ body {
 .lesson-classfiy-nav li .lesson-list-show {
     position: absolute;
     top: -2px;
-    left: 211px;
+    left: 209px;
     -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
     box-shadow: 1px 2px 4px rgba(0, 0, 0, .1);
@@ -376,6 +377,7 @@ body {
     border-right: 0;
 }
 
+
 #banner-left {
     position: absolute;
     left: 0;
@@ -386,9 +388,13 @@ body {
     background: url(../images/banner-left_fe0df34.png) -10px -5px no-repeat;
     width: 40px;
     height: 50px;
-    display: block;
+    display: none;
     overflow: hidden;
 }
+.lesson-center-focus .index-banner:hover #banner-left {
+    display:block;
+}
+
 
 #banner-left:hover {
     background: url(../images/banner-left_fe0df34.png) -10px -65px no-repeat;
@@ -404,8 +410,12 @@ body {
     background: url(../images/banner-right_a0bdd7d.png) -10px -5px no-repeat;
     width: 40px;
     height: 50px;
-    display: block;
-    overflow: hidden;
+    display: none;
+    overflow: none;
+}
+
+.lesson-center-focus .index-banner:hover #banner-right {
+    display:block;
 }
 
 #banner-right:hover {
@@ -443,16 +453,21 @@ body {
 
 .lesson-center-focus .focuswork {
     position: relative;
-    width: 558px;
+    width: 560px;
     margin-top: 13px;
     height: 108px;
-    margin-left: auto;
+    padding: 2px;
     border: 1px solid #E2E2E2;
+}
+
+.lesson-center-focus .focuswork .content-shell{
+    width: 100%;
 }
 
 .lesson-center-focus .focuswork .content {
     width: 2053.33px;
     height: 100%;
+    transform: translate3d(-559.5px,0,0);
 }
 
 .lesson-center-focus .focuswork .lession-item {
@@ -460,7 +475,7 @@ body {
     float: left;
     border-right: 1px solid #F5F5F5;
     height: 100%;
-    width: 185.5px;
+    width: 186.5px;
 }
 
 .lesson-center-focus .focuswork .lession-item .lession-icon {
@@ -493,6 +508,9 @@ body {
     background-size: 48px 80px;
     width: 24px;
     height: 40px;
+    z-index: 200;
+    cursor: pointer;
+    /* display:none; */
 }
 
 .lesson-center-focus .focuswork .arrow-left:hover {
@@ -509,6 +527,9 @@ body {
     background-size: 48px 80px;
     width: 24px;
     height: 40px;
+    z-index: 200;
+    cursor: pointer;
+    /* display:none; */
 }
 
 .lesson-center-focus .focuswork .arrow-right:hover {

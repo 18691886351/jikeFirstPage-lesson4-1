@@ -21,6 +21,48 @@ $(document).ready(function() {
         });
     });
 
+
+    /*
+    focuswork
+    点击向左向右的箭头，到达一个循环滚动的效果。
+    */
+    var focuswork_list_cur = -559.5;
+    var focuswork_list_offer = 186.5;
+    var focuswork_list_max = ($(".lesson-center-focus .focuswork .content").width() - $(".lesson-center-focus .focuswork .content-shell").width()) * -1;
+    var isEdge = 0;//-1左边缘 0没有在边缘 1右边缘
+
+    $("#banner-left1").click(function() {
+        focuswork_list_cur = focuswork_list_cur + focuswork_list_offer;
+        isEdge = 0;
+        if (focuswork_list_cur > 0) {
+            focuswork_list_cur = -932.5
+            isEdge = 1;
+        }
+        focuswork_list_roll();
+    });
+
+    $("#banner-right1").click(function() {
+        focuswork_list_cur = focuswork_list_cur - focuswork_list_offer;
+        isEdge = 0;
+        if (focuswork_list_cur < focuswork_list_max) {
+            focuswork_list_cur = -559.5
+            isEdge = 1;
+        }
+        focuswork_list_roll();
+    })
+
+    function focuswork_list_roll() {
+        /*alert("focuswork_list_cur=" + focuswork_list_cur);*/
+        if (isEdge == 1) {
+            $(".lesson-center-focus .focuswork .content").removeAttr("style");
+            $(".lesson-center-focus .focuswork .content").css("transform", "translate3d(" + focuswork_list_cur + "px,0,0)");
+        } else {
+            $(".lesson-center-focus .focuswork .content").css({ "transform": "translate3d(" + focuswork_list_cur + "px,0,0)", "transition": "all .3s linear " });
+        }
+
+
+    }
+
     /*
     medias-list
     点击向左向右的箭头，到达一个滚动的效果。
@@ -42,11 +84,11 @@ $(document).ready(function() {
         if (medias_list_cur < medias_list_max) {
             medias_list_cur = medias_list_max;
         }
-         medias_list_roll();
+        medias_list_roll();
     });
 
     function medias_list_roll() {
-        $(".medias .medias-list .content").css("transform", "translate3d("+ medias_list_cur+"px,0,0)");
+        $(".medias .medias-list .content").css("transform", "translate3d(" + medias_list_cur + "px,0,0)");
     }
 
     /*
@@ -70,11 +112,11 @@ $(document).ready(function() {
         if (schools_list_cur < schools_list_max) {
             schools_list_cur = schools_list_max;
         }
-         schools_list_roll();
+        schools_list_roll();
     });
 
     function schools_list_roll() {
-        $(".schools .schools-list .content").css("transform", "translate3d("+ schools_list_cur+"px,0,0)");
+        $(".schools .schools-list .content").css("transform", "translate3d(" + schools_list_cur + "px,0,0)");
     }
 
     /*enterprise-list
@@ -105,11 +147,6 @@ $(document).ready(function() {
     function enterprise_list_roll() {
         $(".enterprise .enterprise-list .content").css("transform", "translate3d(" + enterprise_list_cur + "px,0,0)");
     }
-
-
-
-
-
 
     /*
     wiki中li元素mouseover,改变自己的border颜色，同时修改自己相邻元素的border
