@@ -21,6 +21,31 @@ $(document).ready(function() {
         });
     });
 
+    /*
+    move-panel 鼠标划过move-title时，显示不同的内容
+    */
+    $(".recommend .move-panel .move-title li").each(function(i) {
+        $(this).mouseover(function() {
+            $(this).css("color", "#35b558");
+            $(this).siblings().css("color", "#333");
+            $(".recommend .move-panel .move-content ul").eq(i).show();
+            $(".recommend .move-panel .move-content ul").eq(i).siblings().hide();
+        });
+    });
+
+    /*在划过recommend的前四个时，显示move-panel*/
+    $(".recommend >ul>li").each(function(i) {
+        if (i < 4) {
+            $(this).mouseover(function() {
+                $(".recommend .move-panel").show();
+            });
+        }
+    });
+    /*在划出move-panel,隐藏自己*/
+    $(".recommend").mouseout(function(){
+    	$(".recommend .move-panel").hide();
+    });
+
 
     /*
     focuswork
@@ -29,14 +54,14 @@ $(document).ready(function() {
     var focuswork_list_cur = -559.5;
     var focuswork_list_offer = 186.5;
     var focuswork_list_max = ($(".lesson-center-focus .focuswork .content").width() - $(".lesson-center-focus .focuswork .content-shell").width()) * -1;
-    var isEdge = 0;//-1左边缘 0没有在边缘 1右边缘
+    var isEdge = 0; //-1左边缘 0没有在边缘 1右边缘
 
     $("#banner-left1").click(function() {
         focuswork_list_cur = focuswork_list_cur + focuswork_list_offer;
         isEdge = 0;
         if (focuswork_list_cur > 0) {
             focuswork_list_cur = -932.5
-            isEdge = 1;
+            isEdge = -1;
         }
         focuswork_list_roll();
     });
@@ -53,14 +78,21 @@ $(document).ready(function() {
 
     function focuswork_list_roll() {
         /*alert("focuswork_list_cur=" + focuswork_list_cur);*/
-        if (isEdge == 1) {
+        if (isEdge == -1) {
             $(".lesson-center-focus .focuswork .content").removeAttr("style");
-            $(".lesson-center-focus .focuswork .content").css("transform", "translate3d(" + focuswork_list_cur + "px,0,0)");
+            focuswork_list_cur = focuswork_list_cur + focuswork_list_offer;
+            $(".lesson-center-focus .focuswork .content").
+            css({ "animation": "focusworkAniLeft 0.5s linear forwards" }).
+            css("transform", "translate3d(" + focuswork_list_cur + "px,0,0)");
+        } else if (isEdge == 1) {
+            $(".lesson-center-focus .focuswork .content").removeAttr("style");
+            /*$(".lesson-center-focus .focuswork .content").css("transform","translate3d(" + focuswork_list_cur + "px,0,0)");*/
+            $(".lesson-center-focus .focuswork .content").css({ "transform": "translate3d(" + focuswork_list_cur + "px,0,0)" });
         } else {
-            $(".lesson-center-focus .focuswork .content").css({ "transform": "translate3d(" + focuswork_list_cur + "px,0,0)", "transition": "all .3s linear " });
+            $(".lesson-center-focus .focuswork .content").removeAttr("style");
+            /*$(".lesson-center-focus .focuswork .content").css({ "transform": "translate3d(" + focuswork_list_cur + "px,0,0)", "transition": "all .5s linear " });*/
+            $(".lesson-center-focus .focuswork .content").css({ "transform": "translate3d(" + focuswork_list_cur + "px,0,0)", "transition": ".5s" });
         }
-
-
     }
 
     /*
